@@ -1,0 +1,367 @@
+/* BODY STYLES */
+body {
+    font-size: 16px;
+}
+  
+/* HEADER STYLES */
+h1,
+p {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+  
+/* BUMBLEBEE STYLES */
+:root {
+    --bumblebee-size: 300px;
+    --bumblebee-skin: #ffff3a;
+    --bumblebee-stripe: #0e0e0e;
+    /* --bumblebee-beak: orange; */
+}
+    
+@media (max-width: 350px) {
+    :root {
+        --bumblebee-size: 200px;
+        --bumblebee-skin: gold;
+    }
+}
+    
+.bumblebee {
+    position: relative;
+    margin: auto;
+    display: block;
+    margin-top: 5%;
+    width: var(--bumblebee-size, 300px);
+    height: var(--bumblebee-size, 300px);
+    -webkit-animation:updown 2s infinite alternate;
+    animation: hover 2s infinite alternate;
+}
+@-webkit-keyframes hover {
+    to{
+      -webkit-transform:translateY(40px);
+              transform:translateY(40px);
+    }
+} 
+@keyframes hover {
+    to{
+      -webkit-transform:translateY(40px);
+              transform:translateY(40px);
+    }
+}
+
+.right-cheek {
+    top: 15%;
+    left: 35%;
+    background: var(--bumblebee-skin, lightyellow);
+    width: 60%;
+    height: 71%;
+    border-radius: 70% 70% 60% 60%;
+}
+
+.left-cheek {
+    top: 15%;
+    left: 5%;
+    background: var(--bumblebee-skin, lightyellow);
+    width: 60%;
+    height: 70%;
+    border-radius: 70% 70% 60% 60%;
+}
+
+.belly {
+    top: 60%;
+    left: -5%;
+    /* background: var(--penguin-belly, white); */
+    background: repeating-linear-gradient(var(--bumblebee-skin, yellow), var(--bumblebee-skin, yellow) 15px, var(--bumblebee-stripe, black) 15px, var(--bumblebee-stripe, black) 30px);
+    width: 110%;
+    height: 115%;
+    border-radius: 120% 120% 100% 100%;
+}
+
+.bumblebee-top {
+    top: 10%;
+    left: 25%;
+    background: var(--bumblebee-stripe, black);
+    width: 50%;
+    height: 45%;
+    border-radius: 70% 70% 60% 60%;
+}
+
+.bumblebee-bottom {
+    top: 45%;
+    left: 23.5%;
+    background: repeating-linear-gradient(var(--bumblebee-skin, yellow), var(--bumblebee-skin, yellow) 16px, var(--bumblebee-stripe, black) 16px, var(--bumblebee-stripe, black) 32px);
+    width: 53%;
+    height: 45%;
+    border-radius: 70% 70% 100% 100%;
+}
+
+/* WINGS STYLES */
+.right-wing {
+    top: 5%;
+    left: 30%;
+    background: rgba(198, 250, 241, .75);
+    border: 2px solid white;
+    width: 40%;
+    height: 60%;
+    border-radius: 30% 30% 70% 30%;
+    transform: rotate(130deg);
+    z-index: -1;
+    animation-duration: .5s;
+    animation-name: r-flutter;
+    animation-iteration-count: infinite;
+    transform-origin: 0% 0%;
+    animation-timing-function: linear;
+}
+@keyframes r-flutter {
+    10% {
+        transform: rotate(120deg);
+    }
+    20% {
+        transform: rotate(130deg);
+    }
+    30% {
+        transform: rotate(120deg);
+    }
+    40% {
+        transform: rotate(130deg);
+    }
+    50% {
+        transform: rotate(120deg);
+    }
+    60% {
+        transform: rotate(130deg);
+    }
+}
+.right-wing-bottom {
+    top: -10%;
+    left: 85%;
+    background: rgba(198, 250, 241, .75);
+    border: 2px solid white;
+    width: 50%;
+    height: 60%;
+    border-radius: 30% 30% 60% 30%;
+    transform: rotate(337deg);
+    z-index: -1;
+    /* animation-duration: 2s;
+    animation-name: wave;
+    animation-iteration-count: infinite;
+    transform-origin: 0% 0%;
+    animation-timing-function: linear; */
+}
+
+.left-wing {
+    top: 45%;
+    left: 94%;
+    background: rgba(198, 250, 241, .75);
+    border: 2px solid white;
+    width: 40%;
+    height: 60%;
+    border-radius: 30% 30% 30% 70%;
+    transform: rotate(235deg);
+    z-index: -1;
+    animation-duration: .5s;
+    animation-name: l-flutter;
+    animation-iteration-count: infinite;
+    transform-origin: 0% 0%;
+    animation-timing-function: linear;
+}
+@keyframes l-flutter {
+    10% {
+        /* transform: rotate(223deg); */
+        transform: rotate(245deg); 
+    }
+    20% {
+        transform: rotate(235deg);
+    }
+    30% {
+        /* transform: rotate(223deg); */
+        transform: rotate(245deg); 
+    }
+    40% {
+        transform: rotate(235deg);
+    }
+    50% {
+        /* transform: rotate(223deg); */
+        transform: rotate(245deg); 
+    }
+    60% {
+        transform: rotate(235deg);
+    }
+}
+.left-wing-bottom {
+    top: 0%;
+    left: -40%;
+    background: rgba(198, 250, 241, .75);
+    border: 2px solid white;
+    width: 50%;
+    height: 60%;
+    border-radius: 30% 30% 30% 60%;
+    transform: rotate(12deg);
+    z-index: -1;
+}
+
+/* END WINGS STYLES */
+
+
+.right-foot {
+    top: 80%;
+    left: 65%;
+    background: var(--bumblebee-stripe, black);
+    width: 15%;
+    height: 30%;
+    border-radius: 50% 50% 50% 50%;
+    transform: rotate(324deg);
+    z-index: -2222;
+}
+    
+.left-foot {
+    top: 80%;
+    left: 20%;
+    background: var(--bumblebee-stripe, black);
+    width: 15%;
+    height: 30%;
+    border-radius: 50% 50% 50% 50%;
+    transform: rotate(39deg);
+    z-index: -2222;
+}
+#stinger {
+    top: 95%;
+    left: 45%;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 20px solid var(--bumblebee-stripe, black);
+    z-index: -2222;
+}
+
+.right-eye {
+    top: 45%;
+    left: 60%;
+    background: black;
+    width: 15%;
+    height: 17%;
+    border-radius: 50%;
+}
+.left-eye {
+    top: 45%;
+    left: 25%;
+    background: black;
+    width: 15%;
+    height: 17%;
+    border-radius: 50%;
+}
+
+.sparkle {
+    top: 25%;
+    left: 15%;
+    background: white;
+    width: 35%;
+    height: 35%;
+    border-radius: 50%;
+}
+    
+.antenna-right {
+    top: -5%;
+    left: 15%;
+    background: var(--bumblebee-stripe, black);
+    width: 10%;
+    height: 10%;
+    border-radius: 50%;
+}
+.r-antenna-stem {
+    top: 65%;
+    left: 75%;
+    background: var(--bumblebee-stripe, black);
+    width: 15%;
+    height: 200%;
+    border-radius: 50%;
+    transform: skew(9deg);
+}
+
+.antenna-left {
+    top: -5%;
+    left: 70%;
+    background: var(--bumblebee-stripe, black);
+    width: 10%;
+    height: 10%;
+    border-radius: 50%;
+}
+.l-antenna-stem {
+    top: 65%;
+    left: 20%;
+    background: var(--bumblebee-stripe, black);
+    width: 15%;
+    height: 200%;
+    border-radius: 50%;
+    transform: skew(-9deg);
+}
+.smile-top {
+    top: 60%;
+    left: 40%;
+    background: var(--bumblebee-skin, yellow);
+    width: 20%;
+    height: 10%;
+    border-radius: 50%;
+    /* border: 1px solid darkorange; */
+}
+
+.smile-bottom {
+    top: 63%;
+    left: 43.5%;
+    background: transparent;
+    width: 12%;
+    height: 12%;
+    border-radius: 50%;
+    border: 2px solid black;
+}
+
+body {
+    background: #ffe9fb;
+}
+
+.bumblebee * {
+    position: absolute;
+}
+
+.shadow{
+    width: 200px;
+    height: 30px;
+    margin: auto;
+    margin-top: -20px;
+    background: rgb(39, 39, 39);
+    opacity:.6;
+    display: block;
+    -webkit-border-radius:100%;
+            border-radius:100%;
+    -webkit-transform:translateY(60px);
+        -ms-transform:translateY(60px);
+            transform:translateY(60px);
+    -webkit-filter:blur(17px);
+            filter:blur(17px);
+    -webkit-animation:shadow 2s infinite alternate;
+            animation:shadow 2s infinite alternate;
+  }
+  @-webkit-keyframes shadow{
+    from{
+      width: 200px;
+    }
+    to{
+      width: 150px;
+    }
+  }
+  @keyframes shadow{
+    from{
+      width: 200px;
+    }
+    to{
+      width: 150px;
+    }
+  }
+
+/* END BUMBLEBEE STYLES */
+
+/* FOOTER STYLES */
+footer {
+    padding-top: 7em;
+    font-size: .75em;
+}
